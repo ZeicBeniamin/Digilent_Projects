@@ -1,0 +1,242 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1FE53C641FE53C64",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../vga_circles_overlap.gen/sources_1/bd/VgaFormTop2",
+      "name": "VgaFormTop2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ckVideoGen_0": "",
+      "vgaCtrl_0": "",
+      "ctrlImgOlymp_0": "",
+      "imgCombOlymp_0": ""
+    },
+    "ports": {
+      "ck100Mhz": {
+        "direction": "I"
+      },
+      "vgaHsync": {
+        "direction": "O"
+      },
+      "vgaVsync": {
+        "direction": "O"
+      },
+      "vgaRed": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "vgaGreen": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "vgaBlue": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "ckVideoGen_0": {
+        "vlnv": "xilinx.com:module_ref:ckVideoGen:1.0",
+        "xci_name": "VgaFormTop2_ckVideoGen_0_0",
+        "xci_path": "ip/VgaFormTop2_ckVideoGen_0_0/VgaFormTop2_ckVideoGen_0_0.xci",
+        "inst_hier_path": "ckVideoGen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ckVideoGen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ck100Mhz": {
+            "direction": "I"
+          },
+          "ckVideo": {
+            "direction": "O"
+          }
+        }
+      },
+      "vgaCtrl_0": {
+        "vlnv": "xilinx.com:module_ref:vgaCtrl:1.0",
+        "xci_name": "VgaFormTop2_vgaCtrl_0_0",
+        "xci_path": "ip/VgaFormTop2_vgaCtrl_0_0/VgaFormTop2_vgaCtrl_0_0.xci",
+        "inst_hier_path": "vgaCtrl_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vgaCtrl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ckVideo": {
+            "direction": "I"
+          },
+          "vgaHsync": {
+            "direction": "O"
+          },
+          "vgaVsync": {
+            "direction": "O"
+          },
+          "flgActiveArea": {
+            "direction": "O"
+          },
+          "adrHScreen": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "adrVScreen": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "ctrlImgOlymp_0": {
+        "vlnv": "xilinx.com:module_ref:ctrlImgOlymp:1.0",
+        "xci_name": "VgaFormTop2_ctrlImgOlymp_0_0",
+        "xci_path": "ip/VgaFormTop2_ctrlImgOlymp_0_0/VgaFormTop2_ctrlImgOlymp_0_0.xci",
+        "inst_hier_path": "ctrlImgOlymp_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ctrlImgOlymp",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ckVideo": {
+            "direction": "I"
+          },
+          "adrHScreen": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "adrVScreen": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "flgOlymp": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          }
+        }
+      },
+      "imgCombOlymp_0": {
+        "vlnv": "xilinx.com:module_ref:imgCombOlymp:1.0",
+        "xci_name": "VgaFormTop2_imgCombOlymp_0_0",
+        "xci_path": "ip/VgaFormTop2_imgCombOlymp_0_0/VgaFormTop2_imgCombOlymp_0_0.xci",
+        "inst_hier_path": "imgCombOlymp_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "imgCombOlymp",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ckVideo": {
+            "direction": "I"
+          },
+          "flgActiveArea": {
+            "direction": "I"
+          },
+          "flgOlymp": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "vgaRed": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vgaGreen": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vgaBlue": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ck100Mhz_1": {
+        "ports": [
+          "ck100Mhz",
+          "ckVideoGen_0/ck100Mhz"
+        ]
+      },
+      "ckVideoGen_0_ckVideo": {
+        "ports": [
+          "ckVideoGen_0/ckVideo",
+          "vgaCtrl_0/ckVideo",
+          "ctrlImgOlymp_0/ckVideo",
+          "imgCombOlymp_0/ckVideo"
+        ]
+      },
+      "vgaCtrl_0_vgaHsync": {
+        "ports": [
+          "vgaCtrl_0/vgaHsync",
+          "vgaHsync"
+        ]
+      },
+      "vgaCtrl_0_vgaVsync": {
+        "ports": [
+          "vgaCtrl_0/vgaVsync",
+          "vgaVsync"
+        ]
+      },
+      "vgaCtrl_0_adrHScreen": {
+        "ports": [
+          "vgaCtrl_0/adrHScreen",
+          "ctrlImgOlymp_0/adrHScreen"
+        ]
+      },
+      "vgaCtrl_0_adrVScreen": {
+        "ports": [
+          "vgaCtrl_0/adrVScreen",
+          "ctrlImgOlymp_0/adrVScreen"
+        ]
+      },
+      "ctrlImgOlymp_0_flgOlymp": {
+        "ports": [
+          "ctrlImgOlymp_0/flgOlymp",
+          "imgCombOlymp_0/flgOlymp"
+        ]
+      },
+      "vgaCtrl_0_flgActiveArea": {
+        "ports": [
+          "vgaCtrl_0/flgActiveArea",
+          "imgCombOlymp_0/flgActiveArea"
+        ]
+      },
+      "imgCombOlymp_0_vgaRed": {
+        "ports": [
+          "imgCombOlymp_0/vgaRed",
+          "vgaRed"
+        ]
+      },
+      "imgCombOlymp_0_vgaGreen": {
+        "ports": [
+          "imgCombOlymp_0/vgaGreen",
+          "vgaGreen"
+        ]
+      },
+      "imgCombOlymp_0_vgaBlue": {
+        "ports": [
+          "imgCombOlymp_0/vgaBlue",
+          "vgaBlue"
+        ]
+      }
+    }
+  }
+}
