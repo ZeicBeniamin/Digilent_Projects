@@ -1,0 +1,6 @@
+# Ignore folders that don't contain sources
+*.cache
+*.hw
+*.ip_user_files
+*.runs
+
